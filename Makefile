@@ -1,4 +1,7 @@
 mysql:
 	cd mysql-pack && ./run.sh
 
-all: mysql
+nginx:
+	cd nginx-pack && ./run.sh
+
+all: mysql nginx

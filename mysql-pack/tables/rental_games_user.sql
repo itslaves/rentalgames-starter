@@ -24,14 +24,13 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `email` char(50) NOT NULL,
-  `nickname` char(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `nickname` varchar(20) NOT NULL,
   `gender` char(1) NOT NULL,
-  `profile_img` char(100) DEFAULT NULL,
+  `profile_img` varchar(100) DEFAULT NULL,
   `age` int(11) NOT NULL,
-  `oauth.kakao` char(100) DEFAULT NULL,
-  `oauth.naver` char(100) DEFAULT NULL,
-  `oauth.google` char(100) DEFAULT NULL,
+  `oauth_vendor` varchar(20) NOT NULL,
+  `oauth_id` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)

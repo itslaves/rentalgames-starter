@@ -1,3 +1,4 @@
+all: mysql nginx redis
 mysql:
 	cd mysql-pack && ./run.sh
 
@@ -7,4 +8,3 @@ nginx:
 redis:
 	cd redis-pack && ./run.sh
 
-all: mysql nginx redis
